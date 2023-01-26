@@ -1,4 +1,4 @@
-package udp;
+package udp.pruebasiniciales;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
