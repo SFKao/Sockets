@@ -1,0 +1,11 @@
+Vamos a crear un “servidor api” a mano con tcp.
+Este servidor almacena un array de 100 Strings que podrá ser accedido y modificado por distintos clientes a la vez en remoto.
+Tiene que poder responder a estos comandos con estas acciones: (los comando se envían como string por flujo)
+	“GET” -> Envía todos los datos al cliente de vuelta (hola, adios, prueba)
+	“GET 1” -> Envía el elemento de posición 1 (adios)
+	“POST hola” -> añade hola al final del array (ok)
+	“PUT 1 adeu” -> modifica el array en la posición con el nuevo valor (hola, adéu, prueba) (ok)
+
+Se ha de tener cuidado que no 2 sockets entren a la vez en el objeto compartido.
+Tiene que ser un servidor multihilo que pueda responder a varios clientes.
+Si el cliente envia linea vacia se ha de enviar y parar.
