@@ -31,7 +31,7 @@ public class UDPServer {
 
     private static void serverTexto() {
         try (
-                DatagramSocket datagramSocket = new DatagramSocket(26655);
+                DatagramSocket datagramSocket = new DatagramSocket(8500);
         ) {
             while (true) {
                 DatagramPacket dato = new DatagramPacket(

@@ -35,11 +35,11 @@ public class UDPCliente {
         try (
                 DatagramSocket datagramSocket = new DatagramSocket(26656);
         ){
-            String saludos_de_vuelta = "Hola soy Oscar y quiero saludarle";
+            String saludos_de_vuelta = "Hola soy Oscar y quiero estrangularle ugu";
             byte[] bytes = saludos_de_vuelta.getBytes(StandardCharsets.UTF_8);
 
-            InetAddress ip = Inet4Address.getLoopbackAddress();
-            int port = 26655;
+            InetAddress ip = Inet4Address.getByName("192.168.20.182");           //Inet4Address.getLoopbackAddress();
+            int port = 50000;
             DatagramPacket dato = new DatagramPacket(
                     bytes,
                     bytes.length,
